@@ -1,0 +1,335 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My CSC Service Portal</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#00c6ff,#7b2ff7,#ff416c);
+    min-height:100vh;
+    padding-bottom:30px;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    color:white;
+    padding:30px 15px 20px;
+}
+
+.header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.header p{
+    font-size:15px;
+}
+
+/* SEARCH */
+.search{
+    width:90%;
+    max-width:600px;
+    margin:10px auto 30px;
+}
+
+.search input{
+    width:100%;
+    padding:16px 20px;
+    border:0;
+    outline:0;
+    border-radius:50px;
+    font-size:17px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+/* GRID */
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px 15px;
+    text-align:center;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 8px 25px rgba(0,0,0,.22);
+    transition:.25s;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    margin-bottom:15px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.card h2{
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#777;
+    font-size:13px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    color:white;
+    margin-top:35px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>🌐 CSC DIGITAL SERVICE</h1>
+
+    <p>All Services In One Place</p>
+
+</div>
+
+
+<div class="search">
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="🔍 Search Service..."
+        onkeyup="searchService()"
+    >
+
+</div>
+
+
+<div class="container">
+
+<div class="grid">
+
+
+<a class="card"
+href="https://food.wb.gov.in/"
+target="_blank">
+
+<div class="icon">🍚</div>
+
+<h2>Ration Card</h2>
+
+<p>Food & Supplies</p>
+
+</a>
+
+
+<a class="card"
+href="https://voters.eci.gov.in/"
+target="_blank">
+
+<div class="icon">🗳️</div>
+
+<h2>Voter Card</h2>
+
+<p>Election Commission</p>
+
+</a>
+
+
+<a class="card"
+href="https://uidai.gov.in/"
+target="_blank">
+
+<div class="icon">🪪</div>
+
+<h2>Aadhaar Card</h2>
+
+<p>UIDAI</p>
+
+</a>
+
+
+<a class="card"
+href="https://castcertificatewb.gov.in/"
+target="_blank">
+
+<div class="icon">📜</div>
+
+<h2>Caste Certificate</h2>
+
+<p>West Bengal</p>
+
+</a>
+
+
+<a class="card"
+href="https://connect.csc.gov.in/"
+target="_blank">
+
+<div class="icon">💻</div>
+
+<h2>CSC Login</h2>
+
+<p>CSC Digital Seva</p>
+
+</a>
+
+
+<a class="card"
+href="https://digipay.csccloud.in/"
+target="_blank">
+
+<div class="icon">💰</div>
+
+<h2>DigiPay</h2>
+
+<p>CSC DigiPay</p>
+
+</a>
+
+
+<a class="card"
+href="https://digipaylite.csccloud.in/"
+target="_blank">
+
+<div class="icon">⚡</div>
+
+<h2>DigiPay Light</h2>
+
+<p>CSC DigiPay Light</p>
+
+</a>
+
+
+<a class="card"
+href="https://beneficiary.nha.gov.in/"
+target="_blank">
+
+<div class="icon">🏥</div>
+
+<h2>PMJAY</h2>
+
+<p>Ayushman Bharat</p>
+
+</a>
+
+
+<a class="card"
+href="https://pmfby.gov.in/"
+target="_blank">
+
+<div class="icon">🌾</div>
+
+<h2>PMFBY</h2>
+
+<p>Crop Insurance</p>
+
+</a>
+
+
+<a class="card"
+href="https://www.pan.utiitsl.com/"
+target="_blank">
+
+<div class="icon">💳</div>
+
+<h2>PAN Service</h2>
+
+<p>UTIITSL PAN</p>
+
+</a>
+
+
+<a class="card"
+href="https://www.onlineservices.nsdl.com/"
+target="_blank">
+
+<div class="icon">🧾</div>
+
+<h2>NSDL PAN</h2>
+
+<p>PAN Services</p>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+© 2026 My CSC Digital Service Portal
+
+</div>
+
+
+<script>
+
+function searchService(){
+
+    let search =
+    document.getElementById("searchBox")
+    .value
+    .toLowerCase();
+
+    let cards =
+    document.getElementsByClassName("card");
+
+    for(let i=0;i<cards.length;i++){
+
+        let name =
+        cards[i].innerText.toLowerCase();
+
+        if(name.includes(search)){
+            cards[i].style.display="block";
+        }
+        else{
+            cards[i].style.display="none";
+        }
+
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
